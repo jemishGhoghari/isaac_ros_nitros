@@ -89,6 +89,11 @@ public:
     nitros_pub_->publish(msg);
   }
 
+  int getNumSubscribers()
+  {
+    return nitros_pub_->getBasePublisher()->get_subscription_count();
+  }
+
 private:
   rclcpp::Node * node_;
   NitrosContext context_;

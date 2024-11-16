@@ -176,6 +176,9 @@ public:
   // Extract message entities form Vault or MessageRelay in the running graph
   void extractMessagesFromGXF();
 
+  // Get Base Publisher
+  std::shared_ptr<rclcpp::PublisherBase> getBasePublisher() {return compatible_pub_;};
+
 private:
   // The callback function that is invoked when a MessageRelay component receives
   // a message in the GXF graph.
